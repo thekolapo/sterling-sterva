@@ -10,7 +10,14 @@ function toggleAnswer(x){
    
 }
 
-
+function goToStore(){
+    if( /iPhone|iPod|iPad/i.test(navigator.userAgent) ) {
+        window.location.href = "https://itunes.apple.com/ng/app/sterling-onepay/id1388971847?mt=8";
+    }
+    else{
+        window.location.href = "https://play.google.com/store/apps/details?id=com.sterling.onepay&hl=en";
+    }
+}
 
 function expandText(x){
     $(x).parent().siblings().toggle();
