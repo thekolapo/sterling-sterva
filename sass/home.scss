@@ -1,0 +1,1762 @@
+    @import "core/fonts";
+
+
+body{
+    font-family: 'Avenir-Medium';
+    // font-family: 'IBMPlexSans';
+    // font-weight: normal;
+    color: black;
+    /* overflow: hidden; */
+    // overflow-x: hidden;
+    // max-width: 98%;
+    // overflow-x: hidden;
+    font-weight: 500;
+}
+
+button:focus{
+    outline: none;
+}
+
+input{
+    outline: none;
+}
+
+.chat-scroll{
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+.float-left-small{
+    display: none;
+}
+
+#chat-section{
+    // height: 400px;
+    width: 22%;
+    // background: red;
+    z-index: 500;
+    bottom: 100px;
+    position: fixed;
+    right: 130px;
+    font-family: 'Avenir-Book';
+    font-weight: normal;
+
+    .chat-box{
+        width: 100%;
+        border-radius: 5px;
+        box-shadow: 0 2px 80px 5px rgba(0, 0, 0, 0.2);
+        background-color: #ffffff;
+        padding-top: 27px;
+        font-size: 14px;
+        padding-left: 27px;
+        padding-right: 27px;
+        padding-bottom: 35px;
+        display: none;
+
+        .top-section{
+            width: 100%;
+            margin-bottom: 45px;
+            font-size: 20px;
+
+            .header-text{
+               
+            }
+
+            i{
+                // right: 0px;
+                float: right;
+                font-size: 24px;
+                cursor: pointer;
+            }
+        }
+
+        .bot-chat{
+            // width: 80%;
+            border-radius: 57.5px;
+            background-color: #eeddd7;
+            padding-top: 19px;
+            padding-bottom: 19px;
+            padding-left: 23px;
+            padding-right: 20px;
+            margin-bottom: 15.5px;
+            float: left;
+        }
+
+        .human-chat{
+            float: right;
+            // width: 50%;
+            border-radius: 57.5px;
+            background-color: #d3300d;
+            padding: 10px 38px 10px 38px;
+            right: 0px;
+            color: white;
+            margin-top: 25px;
+            margin-bottom: 25px;
+        }
+
+        #message-section{
+            margin-top: 60px;
+            height: 36px;
+
+            input{
+                width: 85%;
+                height: 100%;
+                border-radius: 5px;
+                border: solid 1px #979797;
+                background-color: #ffffff;
+                opacity: 0.5;
+                font-size: 12px;
+                padding-left: 14px;
+                float: left;
+            }
+
+            button{
+                height: 100%;
+                float: right;
+                width: 10%;
+                border-radius: 5px;
+                background-color: #d3300d;
+                border: none;
+                color: white;
+                font-size: 17px;
+            }
+        }
+        
+    }
+
+    .circle-button{
+        width: 56px;
+        height: 56px;
+        border-radius: 50px;
+        box-shadow: 0 2px 80px 5px rgba(0, 0, 0, 0.2);
+        border: none;
+        margin-top: 10px;
+        float: right;
+        // background: bisque;
+        // background: #d3300d;
+        // background: transparent;
+        background-image: url("/img/floating-chat-button.png");
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+#nav{
+    width: 70%;
+    height: 30px;
+    padding-top: 48px;
+    margin: 0 auto;
+    font-size: 17px;
+    font-weight: 500;
+
+    .left-side{
+        float: left;
+        width: 50%;
+        // height: 50px;
+        // background: gray;
+
+        img{
+            object-fit: contain;
+            width: 26px;
+            height: 26px;
+
+            // width: 5%;
+            float: left;
+        }
+
+        div{
+            display: block;
+            width: 50%;
+            float: left;
+            margin-top: 3.4px;
+            margin-left: 7px;
+        }
+    }
+
+    .right-side{
+        width: 50%;
+        height: 30px;
+        // background: green;
+        float: right;
+
+        a{
+            float: right;
+            margin-left: 50px;
+            color: black;
+        }
+
+        a:hover{
+            text-decoration: none;
+        }
+    }
+
+}
+
+.long-text{
+    width: 80%;
+    margin-left: 10%;
+    float: left;
+    // margin: 0 auto;
+    color: #0000009a;
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 70px;
+    font-family: 'Avenir-Book';
+    font-weight: normal;
+    opacity: 0.7;
+}
+
+#hero-section{
+    width: 60%;
+    // height: 100px;
+    margin: 0 auto;
+    padding-top: 250px;
+    // background: black;
+    padding-bottom: 200px;
+
+    .left-side{
+        width: 45%;
+        height: 480px;
+        float: left;
+        // background: grey;
+
+        img{
+            height: 100%;
+            width: 100%;
+            object-fit: contain;
+            object-position: left;
+        }
+    }
+
+    .right-side{
+        width: 50%;
+        float: right;
+        color: #212b36;
+        padding-top: 90px;
+        padding-bottom: 30px;
+
+        .header-text{
+            font-size: 70px;
+        }
+
+        .small-text{
+            font-size: 23px;
+            opacity: 0.54;
+            margin-top: 23px;
+            margin-bottom: 58px;
+            font-family: 'Avenir-Book';
+            font-weight: normal;
+        }
+
+        button{
+            height: 49px;
+            font-size: 14px;
+            padding: 13px 30px 13px;
+            margin-right: 16px;
+            border-radius: 5px;
+            color: #05050585;
+            cursor: pointer;
+            background: transparent;
+        }
+
+        .button-chat{
+            background-color: #d3310f;
+            color: white;
+        }
+    }
+
+}
+
+#section-sterva-functions{
+    width: 51.3%;
+    margin: 0 auto;
+    margin-top: 200px;
+    margin-bottom: 150px;
+    // background: #d3310f;
+
+    .header-text{
+        width: 100%;
+        float: left;
+        text-align: center;
+        font-size: 36px;
+        color: #212b36;
+        font-weight: 500;
+        margin-bottom: 23px;
+    }
+
+    .sterva-function{
+        float: left;
+        width: 50%;
+        margin-bottom: 75px;
+        // background: gray;
+
+        .circle{
+            width:  49px;
+            height: 49px;
+            border: solid 1px #979797;
+            background:rgba(128, 128, 128, 0.541);
+            border-radius: 50px;
+            float: left;
+            margin-right: 20px;
+        }
+
+        .text{
+            width: 80%;
+            float: left;
+            font-size: 24px;
+            // background: red;
+            font-family: 'Avenir-Roman';
+            font-weight: normal;
+
+            .small-text{
+                font-size: 17px;
+                color: #212b36;
+                opacity: 0.7;
+                // background: green;
+            }
+        }
+    }
+
+    .float-right{
+        float: right;
+
+        .circle{
+            float: right;
+            margin-right: 20px;
+        }
+
+        .text{
+            float: right;
+        }
+    }
+
+    .float-left{
+        float: left;
+    }
+
+}
+
+#section-faqs{
+    padding-top: 100px;
+    width: 70%;
+    margin: 0 auto;
+    background: #d3310f;
+
+   
+}
+
+// #section-contact{
+//     background: green;
+//     padding-top: 100px;
+
+// }
+.question-box{
+    width: 97%;
+    // height: 60px;
+    padding-bottom: 19px;
+    border-radius: 6px;
+    border: solid 1px rgba(156, 167, 153, 0.5);
+    font-size: 17px;
+    color: #6e6e6ef8;
+    padding-top: 15px;
+    padding-left: 5px;
+    font-family: 'Avenir-Book';
+    font-weight: normal;
+   
+
+    .question{
+        opacity: 0.9;
+    }
+
+    .fa{
+        color: #d3300fb7;;
+        
+        // color: #65aa4f;
+    }
+}
+
+#faq-section{
+    padding-top: 124px; 
+    padding-bottom: 113px;
+
+    .header-text{
+        text-align: center;
+        font-size: 36px;
+        color: #212b36;
+        font-weight: 500;
+        margin-bottom: 23px;
+        font-family: 'Avenir-Book';
+        font-weight: normal;
+    }
+
+}
+
+.faq-left-section{
+    float: left;
+    width: 50%;
+    // height: 100px;
+    // background: red;
+
+    .question-box{
+        float: left;
+        margin-bottom: 20px;
+    }
+}
+
+.faq-right-section{
+    float: right;
+    width: 50%;
+    // height: 100px;
+
+    .question-box{
+        float: right;
+        margin-bottom: 20px;
+    }
+
+}
+
+.answer{
+    margin-top: 20px;
+    font-size: 17px;
+    font-weight: 300;
+    color: #6e6e6e;
+    display: none;
+}
+
+.faq-clickable-section{
+    cursor: pointer;
+}
+
+#contact-section{
+    width: 103%;
+    padding-top: 39px;
+    padding-bottom: 98px;
+    // background: red;
+    background-color: rgba(238, 221, 215, 0.41);
+
+    .header-text{
+        text-align: center;
+        font-size: 36px;
+        color: #212b36;
+        font-weight: 500;
+        margin-bottom: 23px;
+        font-family: 'Avenir-Book';
+        font-weight: normal;
+    }
+
+    .right-section{
+        padding-left: 120px;
+        // padding-top: 100px;
+
+        .contact, a{
+            text-decoration: none;
+            outline: none;
+            font-size: 22px;
+            font-weight: 300;
+            color: #6e6e6ef6; 
+            margin-bottom: 30px;
+
+            .fa{
+                margin-right: 31px;
+                color: black;
+            }  
+            
+        }
+
+    }
+
+   input:focus{
+       outline: none;
+   }
+  
+}
+
+.form-and-contact-details{
+    width: 55%;
+    margin: 0 auto;
+    background: green;
+
+    .left-part{
+        float: left;
+        font-size: 20px;
+        width: 50%;
+        // background: red;
+
+        .contact-info{
+            width: 90%;
+            // background: olive;
+            margin-bottom: 40px;
+            float: left;
+            font-family: 'Avenir-Roman';
+            font-weight: normal;
+
+            i{
+                width: 10%;
+                float: left;
+                margin-top: 3px;
+                font-size: 24px;
+                color: #424b5a;;
+            }
+
+            span{
+                width: 70%;
+                float: left;
+                opacity: 0.5;
+            }
+        }
+    }
+
+    .right-part{
+        float: right;
+        width: 40%;
+        // background: red;
+        // height: 200px;;
+
+        button{
+            text-transform: uppercase;
+            width: 100%;
+            float: right;
+            margin-top: 18.4px;
+            padding-top: 1px;
+            height: 46px;
+            border-radius: 4px;
+            background-color: #d3300d;
+            color: white;
+        }
+
+        .text-field{
+            width: 100%;
+            float: right;
+            padding-left: 10px;
+            height: 47.6px;
+            border-radius: 2px;
+            border: solid 1px #d6d6d6;
+            margin-bottom: 18.5px;
+            // background: beige;
+        }
+
+        textarea{
+            float: right;
+            margin-top: 10px;
+            height: 110.5px;
+            padding-left: 10px;
+            border-radius: 2px;
+            border: solid 1px #d6d6d6;
+            width: 100%;
+            padding-top: 15px;
+            -webkit-appearance: none;
+        }
+
+        textarea::placeholder, input::placeholder{
+            font-size: 14px;
+            color: #93979f;
+        }
+
+        textarea:focus, input:focus{
+            outline: none;
+        }
+
+        input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+            -webkit-appearance: none; 
+            margin: 0; 
+        }
+    }
+}
+
+#section-copyright{
+    text-align: center;
+    // width: 100%;
+    padding-top: 20px;
+    padding-bottom: 34px;
+    font-size: 14px;
+    color: #00000070;
+}
+
+@media screen and (max-width: 1500px){
+    .form-and-contact-details{
+        width: 60%;
+        margin: 0 auto;
+        background: green;
+        // display: none;
+    
+        .left-part{
+            float: left;
+            font-size: 20px;
+            width: 50%;
+            // background: red;
+    
+            .contact-info{
+                width: 90%;
+                // background: olive;
+                margin-bottom: 40px;
+                float: left;
+                font-family: 'Avenir-Roman';
+                font-weight: normal;
+    
+                i{
+                    width: 10%;
+                    float: left;
+                    margin-top: 3px;
+                    font-size: 24px;
+                    color: #424b5a;;
+                }
+    
+                span{
+                    width: 80%;
+                    float: left;
+                    opacity: 0.5;
+                }
+            }
+        }
+    
+    }
+    
+}
+
+@media screen and (max-width: 1440px){
+    .form-and-contact-details{
+        width: 65%;
+        margin: 0 auto;
+        background: green;
+        // display: none;
+    
+        .left-part{
+            float: left;
+            font-size: 20px;
+            width: 50%;
+            // background: red;
+    
+            .contact-info{
+                width: 90%;
+                // background: olive;
+                margin-bottom: 40px;
+                float: left;
+                font-family: 'Avenir-Roman';
+                font-weight: normal;
+    
+                i{
+                    width: 10%;
+                    float: left;
+                    margin-top: 3px;
+                    font-size: 24px;
+                    color: #424b5a;;
+                }
+    
+                span{
+                    width: 80%;
+                    float: left;
+                    opacity: 0.5;
+                }
+            }
+        }
+    
+        .right-part{
+            float: right;
+            width: 45%;
+            // background: red;
+            // height: 200px;;
+    
+            button{
+                text-transform: uppercase;
+                width: 100%;
+                float: right;
+                margin-top: 18.4px;
+                padding-top: 1px;
+                height: 46px;
+                border-radius: 4px;
+                background-color: #d3300d;
+                color: white;
+            }
+    
+            .text-field{
+                width: 100%;
+                float: right;
+                padding-left: 10px;
+                height: 47.6px;
+                border-radius: 2px;
+                border: solid 1px #d6d6d6;
+                margin-bottom: 18.5px;
+                // background: beige;
+            }
+    
+            textarea{
+                float: right;
+                margin-top: 10px;
+                height: 110.5px;
+                padding-left: 10px;
+                border-radius: 2px;
+                border: solid 1px #d6d6d6;
+                width: 100%;
+                padding-top: 15px;
+                -webkit-appearance: none;
+            }
+    
+            textarea::placeholder, input::placeholder{
+                font-size: 14px;
+                color: #93979f;
+            }
+    
+            textarea:focus, input:focus{
+                outline: none;
+            }
+    
+            input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+                -webkit-appearance: none; 
+                margin: 0; 
+            }
+        }
+    }
+    
+    #hero-section{
+        width: 70%;
+
+        .right-side{
+            width: 50%;
+            float: right;
+            color: #212b36;
+            // padding-top: 50px;
+            padding-bottom: 30px;
+    
+            .header-text{
+                font-size: 64px;
+            }
+    
+            .small-text{
+                font-size: 21px;
+            }
+        }
+    }
+
+    #chat-section{
+        width: 27%;
+    }
+
+}
+
+@media screen and (max-width: 1350px){
+
+    #section-sterva-functions{
+        width: 60%;   
+    }
+
+
+    #chat-section{
+        width: 30%;
+    }
+
+}
+
+@media screen and (max-width: 1280px){
+
+    #section-sterva-functions{
+        width: 70%;  
+    }
+
+    #chat-section{
+        width: 35%;
+    }
+
+    .form-and-contact-details{
+        width: 75%;
+        margin: 0 auto;
+        background: green;
+        // display: none;
+    
+        .left-part{
+            float: left;
+            font-size: 20px;
+            width: 50%;
+            // background: red;
+    
+            .contact-info{
+                width: 90%;
+                // background: olive;
+                margin-bottom: 40px;
+                float: left;
+                font-family: 'Avenir-Roman';
+                font-weight: normal;
+    
+                i{
+                    width: 10%;
+                    float: left;
+                    margin-top: 3px;
+                    font-size: 24px;
+                    color: #424b5a;;
+                }
+    
+                span{
+                    width: 80%;
+                    float: left;
+                    opacity: 0.5;
+                }
+            }
+        }
+    
+        .right-part{
+            float: right;
+            width: 45%;
+            // background: red;
+            // height: 200px;;
+    
+            button{
+                text-transform: uppercase;
+                width: 100%;
+                float: right;
+                margin-top: 18.4px;
+                padding-top: 1px;
+                height: 46px;
+                border-radius: 4px;
+                background-color: #d3300d;
+                color: white;
+            }
+    
+            .text-field{
+                width: 100%;
+                float: right;
+                padding-left: 10px;
+                height: 47.6px;
+                border-radius: 2px;
+                border: solid 1px #d6d6d6;
+                margin-bottom: 18.5px;
+                // background: beige;
+            }
+    
+            textarea{
+                float: right;
+                margin-top: 10px;
+                height: 110.5px;
+                padding-left: 10px;
+                border-radius: 2px;
+                border: solid 1px #d6d6d6;
+                width: 100%;
+                padding-top: 15px;
+                -webkit-appearance: none;
+            }
+    
+            textarea::placeholder, input::placeholder{
+                font-size: 14px;
+                color: #93979f;
+            }
+    
+            textarea:focus, input:focus{
+                outline: none;
+            }
+    
+            input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+                -webkit-appearance: none; 
+                margin: 0; 
+            }
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 1024px){
+    #hero-section{
+        width: 80%;
+        // display: none;
+    }
+
+    #nav{
+        width: 80%;
+    }
+
+    #chat-section{
+        width: 40%;
+    }
+
+    .form-and-contact-details{
+        width: 85%;
+        margin: 0 auto;
+        background: green;
+        // display: none;
+    
+        .left-part{
+            float: left;
+            font-size: 20px;
+            width: 50%;
+            // background: red;
+    
+            .contact-info{
+                width: 90%;
+                // background: olive;
+                margin-bottom: 40px;
+                float: left;
+                font-family: 'Avenir-Roman';
+                font-weight: normal;
+    
+                i{
+                    width: 10%;
+                    float: left;
+                    margin-top: 3px;
+                    font-size: 24px;
+                    color: #424b5a;;
+                }
+    
+                span{
+                    width: 80%;
+                    float: left;
+                    opacity: 0.5;
+                }
+            }
+        }
+    
+        .right-part{
+            float: right;
+            width: 45%;
+            // background: red;
+            // height: 200px;;
+    
+            button{
+                text-transform: uppercase;
+                width: 100%;
+                float: right;
+                margin-top: 18.4px;
+                padding-top: 1px;
+                height: 46px;
+                border-radius: 4px;
+                background-color: #d3300d;
+                color: white;
+            }
+    
+            .text-field{
+                width: 100%;
+                float: right;
+                padding-left: 10px;
+                height: 47.6px;
+                border-radius: 2px;
+                border: solid 1px #d6d6d6;
+                margin-bottom: 18.5px;
+                // background: beige;
+            }
+    
+            textarea{
+                float: right;
+                margin-top: 10px;
+                height: 110.5px;
+                padding-left: 10px;
+                border-radius: 2px;
+                border: solid 1px #d6d6d6;
+                width: 100%;
+                padding-top: 15px;
+                -webkit-appearance: none;
+            }
+    
+            textarea::placeholder, input::placeholder{
+                font-size: 14px;
+                color: #93979f;
+            }
+    
+            textarea:focus, input:focus{
+                outline: none;
+            }
+    
+            input[type=number]::-webkit-inner-spin-button, input[type=number]::-webkit-outer-spin-button { 
+                -webkit-appearance: none; 
+                margin: 0; 
+            }
+        }
+    }
+    
+}
+
+@media screen and (max-width: 1023px){
+    #hero-section{
+        width: 80%;
+
+        .left-side{
+            width: 45%;
+            height: 400px;
+            float: left;
+            // background: grey;
+        }
+    
+        .right-side{
+            width: 50%;
+
+            .header-text{
+                font-size: 50px;
+            }
+    
+            .small-text{
+                font-size: 19px;
+            }
+    
+            button{
+                font-size: 14px;
+                padding: 13px 20px 13px;
+                margin-right: 14px;
+            }
+        }
+    }
+
+    #section-sterva-functions{
+        width: 80%; 
+    }
+}
+
+@media screen and (max-width: 900px){
+    #section-sterva-functions{
+        // width: 75%; 
+
+        .header-text{
+            font-size: 30px;
+        }
+    
+        .sterva-function{
+            float: left;
+            width: 50%;
+            margin-bottom: 75px;
+            // background: gray;
+    
+            .circle{
+                width:  40px;
+                height: 40px;
+            }
+    
+            .text{
+                width: 80%;
+                font-size: 20px;
+    
+                .small-text{
+                    font-size: 16px;
+                }
+            }
+
+           
+        }
+
+        .float-right{
+           display: none;
+        }
+
+        .float-left-small{
+            display: block;
+        }
+    
+    }
+
+    #chat-section{
+        width: 40%;
+    }
+
+    #nav{
+        width: 90%;
+    
+        .left-side{
+            float: left;
+            width: 40%;
+            // height: 50px;
+            float: left;
+            // background: gray;
+    
+            img{
+                object-fit: contain;
+                width: 26px;
+                height: 26px;
+    
+                // width: 5%;
+                float: left;
+            }
+    
+            div{
+                display: block;
+                width: 50%;
+                float: left;
+                margin-top: 3.4px;
+                margin-left: 7px;
+            }
+        }
+    
+        .right-side{
+            width: 60%;
+            height: 30px;
+            // background: green;
+            float: right;
+    
+            a{
+                float: right;
+                margin-left: 40px;
+                color: black;
+            }
+    
+            a:hover{
+                text-decoration: none;
+            }
+        }
+    
+    }
+}
+
+@media screen and (max-width: 800px){
+    #hero-section{
+        width: 90%;
+    }
+
+    #section-sterva-functions{
+        // width: 75%; 
+
+        .header-text{
+            font-size: 30px;
+            text-align: left;
+        }
+    
+        .sterva-function{
+            float: left;
+            width: 70%;
+            margin-bottom: 75px;
+            // background: gray;
+            // margin-left: 15%;
+
+            .circle{
+                width:  49px;
+                height: 49px;
+            }
+    
+            .text{
+                width: 80%;
+                font-size: 25px;
+    
+                .small-text{
+                    font-size: 19px;
+                }
+            }
+        }
+
+        .long-text{
+            font-size: 22px;
+            text-align: left;
+            width: 100%;
+            margin-left: 0px;
+        }
+    
+    }
+
+    #chat-section{
+        width: 45%;
+    }
+}
+
+
+@media screen and (max-width: 720px){
+
+    .form-and-contact-details{
+        width: 85%;
+        margin: 0 auto;
+    
+        .left-part{
+            float: left;
+            font-size: 20px;
+            width: 100%;
+            // background: red;
+    
+            .contact-info{
+                width: 90%;
+                // background: olive;
+                margin-bottom: 40px;
+                float: left;
+                font-family: 'Avenir-Roman';
+                font-weight: normal;
+    
+                i{
+                    width: 10%;
+                    float: left;
+                    margin-top: 3px;
+                    font-size: 24px;
+                    color: #424b5a;;
+                }
+    
+                span{
+                    width: 80%;
+                    float: left;
+                    opacity: 0.5;
+                }
+            }
+        }
+    
+        .right-part{
+            float: left;
+            width: 90%;
+            // background: red;
+            // height: 200px;;
+    
+            button{
+                text-transform: uppercase;
+                width: 100%;
+                float: right;
+                margin-top: 18.4px;
+                padding-top: 1px;
+                height: 46px;
+                border-radius: 4px;
+                background-color: #d3300d;
+                color: white;
+            }
+    
+            .text-field{
+                width: 100%;
+                float: right;
+                padding-left: 10px;
+                height: 47.6px;
+                border-radius: 2px;
+                border: solid 1px #d6d6d6;
+                margin-bottom: 18.5px;
+                // background: beige;
+            }
+    
+            textarea{
+                float: right;
+                margin-top: 10px;
+                height: 110.5px;
+                padding-left: 10px;
+                border-radius: 2px;
+                border: solid 1px #d6d6d6;
+                width: 100%;
+                padding-top: 15px;
+                -webkit-appearance: none;
+            }
+    
+        }
+    }
+
+    #contact-section{
+        width: 103%;
+        padding-top: 39px;
+        padding-bottom: 98px;
+        // background: red;
+        background-color: rgba(238, 221, 215, 0.41);
+    
+        .header-text{
+            text-align: left;
+            font-size: 30px;
+            margin-left: 5%;
+        }
+
+        .long-text{
+            text-align: left;
+            margin-left: 7%;
+            // font-size: 14px;
+        }
+    
+        .right-section{
+            padding-left: 0px;
+            // padding-top: 100px;
+    
+            .contact, a{
+                text-decoration: none;
+                outline: none;
+                font-size: 22px;
+                font-weight: 300;
+                color: #6e6e6ef6; 
+                margin-bottom: 30px;
+    
+                .fa{
+                    margin-right: 31px;
+                    color: black;
+                }  
+                
+            }
+    
+        }
+    
+       input:focus{
+           outline: none;
+       }
+      
+    }
+
+    #chat-section{
+        width: 50%;
+    }
+
+    #faq-section{
+    
+        .header-text{
+            text-align: left;
+            font-size: 30px;
+            margin-left: 3%;
+        }
+
+        .long-text{
+            width: 92%;
+            margin-left: 3%;
+            text-align: left;
+            font-size: 22px;
+        }
+    
+    }
+   
+    .faq-left-section{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .faq-right-section{
+        width: 90%;
+        margin-left: 5%;
+        float: left;
+        
+        .question-box{
+            float: left;
+        }
+    }
+
+    #hero-section{
+        width: 100%;
+
+        .left-side{
+            width: 50%;
+            margin-left: 21%;
+            margin-bottom: 50px;
+        }
+
+        .right-side{
+            width:60%;
+            float: left;
+            margin: 0 auto;
+            margin-left: 20%;
+
+            // .header-text{
+            //     text-align: center;
+            // }
+
+            // .small-text{
+            //     text-align: center;
+            // }
+
+            // .button-section{
+            //     width: 80%;
+            //     // background: black;
+            //     margin : 0 auto;
+            // }
+        }
+    }
+
+    #section-sterva-functions{
+        // width: 75%; 
+
+        .header-text{
+            font-size: 30px;
+            text-align: left;
+            margin-left: 10%;
+            
+        }
+    
+        .sterva-function{
+            float: left;
+            width: 80%;
+            margin-bottom: 75px;
+            // background: gray;
+            margin-left: 10%;
+
+            .circle{
+                width:  49px;
+                height: 49px;
+            }
+    
+            .text{
+                width: 80%;
+                font-size: 25px;
+    
+                .small-text{
+                    font-size: 19px;
+                }
+            }
+        }
+
+        .long-text{
+            font-size: 22px;
+            text-align: left;
+            width: 80%;
+            margin-left: 10%;
+        }
+    
+    }
+
+}
+
+@media screen and (max-width: 600px){
+    #hero-section{
+        width: 100%;
+
+        .left-side{
+            width: 60%;
+            margin-left: 16%;
+            margin-bottom: 50px;
+        }
+
+        .right-side{
+            width:70%;
+            float: left;
+            margin: 0 auto;
+            margin-left: 15%;
+
+        }
+    }
+
+    #section-sterva-functions{
+        // width: 100%; 
+        // display: none;
+        .header-text{
+            font-size: 30px;
+            text-align: left;
+            margin-left: 5%;
+            
+        }
+
+        .sterva-function{
+            float: left;
+            width: 90%;
+            margin-bottom: 75px;
+            // background: gray;
+            margin-left: 5%;
+
+            .circle{
+                width:  49px;
+                height: 49px;
+            }
+    
+            .text{
+                width: 80%;
+                font-size: 25px;
+    
+                .small-text{
+                    font-size: 19px;
+                }
+            }
+        }
+
+        .long-text{
+            margin-left: 5%;
+        }
+    }
+
+    #chat-section{
+        width: 60%;
+        right: 50px;
+        bottom: 60px;
+    }
+
+    #nav{
+        width: 84%;
+    
+        .left-side{
+            float: left;
+            width: 100%;
+            // height: 50px;
+            float: left;
+            // background: gray;
+    
+            img{
+                object-fit: contain;
+                width: 26px;
+                height: 26px;
+    
+                // width: 5%;
+                float: left;
+            }
+    
+            div{
+                display: block;
+                width: 50%;
+                float: left;
+                margin-top: 3.4px;
+                margin-left: 12px;
+            }
+        }
+    
+        .right-side{
+           display: none;
+        }
+    
+    }
+
+}
+
+@media screen and (max-width: 480px){
+
+    #nav{
+        font-size: 18px;
+    }
+
+    #hero-section{
+        padding-top: 140px;
+    }
+
+    #section-sterva-functions{
+        margin-top: 130px;
+        margin-bottom: 0px;
+    }
+
+
+    #contact-section{
+        width: 103%;
+        padding-top: 39px;
+        padding-bottom: 98px;
+        // background: red;
+        background-color: rgba(238, 221, 215, 0.41);
+    
+        .header-text{
+            text-align: left;
+            font-size: 30px;
+            margin-left: 5%;
+        }
+
+        .long-text{
+            text-align: left;
+            margin-left: 9%;
+            // font-size: 14px;
+        }
+    
+        .right-section{
+            padding-left: 0px;
+            // padding-top: 100px;
+    
+            .contact, a{
+                text-decoration: none;
+                outline: none;
+                font-size: 22px;
+                font-weight: 300;
+                color: #6e6e6ef6; 
+                margin-bottom: 30px;
+    
+                .fa{
+                    margin-right: 31px;
+                    color: black;
+                }  
+                
+            }
+    
+        }
+      
+    }
+    .form-and-contact-details{
+        width: 82%;
+        margin: 0 auto;
+    
+        .left-part{
+            float: left;
+            font-size: 20px;
+            width: 100%;
+            // background: red;
+    
+            .contact-info{
+                width: 100%;
+                // background: olive;
+                margin-bottom: 40px;
+                float: left;
+                font-family: 'Avenir-Roman';
+                font-weight: normal;
+    
+                i{
+                    width: 10%;
+                    float: left;
+                    margin-top: 3px;
+                    font-size: 24px;
+                    color: #424b5a;;
+                }
+    
+                span{
+                    width: 90%;
+                    float: left;
+                    opacity: 0.5;
+                }
+            }
+        }
+    
+        .right-part{
+            float: left;
+            width: 100%;
+            // background: red;
+            // height: 200px;;
+    
+            button{
+                text-transform: uppercase;
+                width: 100%;
+                float: right;
+                margin-top: 18.4px;
+                padding-top: 1px;
+                height: 46px;
+                border-radius: 4px;
+                background-color: #d3300d;
+                color: white;
+            }
+    
+            .text-field{
+                width: 100%;
+                float: right;
+                padding-left: 10px;
+                height: 47.6px;
+                border-radius: 2px;
+                border: solid 1px #d6d6d6;
+                margin-bottom: 18.5px;
+                // background: beige;
+            }
+    
+            textarea{
+                float: right;
+                margin-top: 10px;
+                height: 110.5px;
+                padding-left: 10px;
+                border-radius: 2px;
+                border: solid 1px #d6d6d6;
+                width: 100%;
+                padding-top: 15px;
+                -webkit-appearance: none;
+            }
+    
+        }
+    }
+    
+    body{
+        max-width: 96%;
+    }
+
+    #contact-section{
+        // display: none;
+        width: 108%;
+    }
+
+    .chat-scroll{
+        max-height: 300px;
+        // max-width: 80%;
+    }
+
+    #chat-section{
+        width: 88%;
+        right: 20px;
+        bottom: 15px;
+    }
+
+    #section-sterva-functions{
+        width: 90%; 
+        // display: none;
+
+        .header-text{
+            font-size: 25px;
+            text-align: left;
+            margin-left: 0%;
+            
+        }
+
+        .sterva-function{
+            float: left;
+            width: 100%;
+            margin-bottom: 75px;
+            // background: gray;
+            margin-left: 0%;
+
+            .circle{
+                width:  49px;
+                height: 49px;
+            }
+    
+            .text{
+                width: 70%;
+                font-size: 20px;
+    
+                .small-text{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .long-text{
+            margin-left: 0%;
+            width: 100%;
+        }
+    }
+
+    #hero-section{
+        width: 100%;
+
+        .left-side{
+            width: 85%;
+            margin-left: 5%;
+            margin-bottom: 50px;
+        }
+
+        .right-side{
+            width:90%;
+            float: left;
+            margin-left: 5%;
+
+        }
+    }
+
+    #faq-section{
+    
+        .header-text{
+            text-align: left;
+            font-size: 30px;
+            margin-left: 0%;
+        }
+
+        .long-text{
+            width: 100%;
+            margin-left: 0%;
+            text-align: left;
+            font-size: 22px;
+        }
+    
+    }
+   
+    .faq-left-section{
+        width: 99%;
+        margin-left: 4%;
+    }
+
+    .faq-right-section{
+        width: 99%;
+        margin-left: 4%;
+        float: left;
+        
+        .question-box{
+            float: left;
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 320px){
+    .chat-scroll{
+        max-height: 250px;
+        width: 95%;
+    }
+
+    #hero-section{
+        width: 100%;
+
+        .left-side{
+            width: 85%;
+            margin-left: 5%;
+            margin-bottom: 50px;
+        }
+
+        .right-side{
+            width:90%;
+            float: left;
+            margin-left: 5%;
+
+            button{
+                font-size: 12px;
+                padding: 13px 17px 13px;
+                margin-right: 8px;
+              
+            }
+
+        }
+    }
+
+    #section-sterva-functions{
+        .header-text{
+            font-size: 22px;
+            
+        }
+    }
+
+}
+
+

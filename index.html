@@ -1,0 +1,333 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Sterlar</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="css/style.css">  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+
+  <!-- <link rel="stylesheet" href="./assets/theme/css/bootstrap.css"> -->
+  <!-- <link rel="stylesheet" href="./assets/theme/css/fonts.css"> -->
+  <!-- <link rel="stylesheet" href="./assets/theme/css/style.css"> -->
+  <!-- <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" /> -->
+  <link rel="stylesheet" href="//cdn.botframework.com/botframework-webchat/latest/botchat.css" />
+  <link rel="stylesheet" href="assets/css/clayfy.css" />
+  <link rel="stylesheet" href="assets/css/custom.css" />
+
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+  <!-- <div id="chat-section">
+   <div class="chat-box">
+     <div class="chat-scroll">
+        <div class="top-section">
+            <span class="header-text">Chat with <b>Sterlar</b></span>
+            <i class="fas fa-times" onclick="toggleChat()"></i>
+        </div>
+        <div class="bot-chat">Hi there! I am Sterva, and I can help you send money, topup, check your balance and more.</div>
+        <div class="row"></div>
+        <div class="bot-chat">What do I call you?</div>
+        <div class="row"></div>
+        <div class="human-chat">Eleanor</div>
+        <div class="row"></div>
+        <div class="bot-chat">What would you like to begin with? You may type 'Help' to see my commands.</div>
+        <div class="row"></div>
+     </div>
+     <div id="message-section">
+       <input class="text-field" placeholder="Type your message here…">
+       <button class=""><i class="fas fa-chevron-right"></i></button>
+     </div>
+   </div>
+   <button class="circle-button" onclick="toggleChat()"></button>
+  </div> -->
+  <div class="page animated" style="animation-duration: 500ms;"></div>
+  <div class="btn-group dropup pb-chat-btn-push">
+      <a href="#" data-toggle="popover" data-placement="left" data-content="Hey, I'm ready to help you!"></a>
+
+      <button class="popup-btn dropdown-toggle btn-lg" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <div>
+              <!-- <img class="girl" src="assets/images/agent-ready.png" alt="" /> -->
+              <img  class="chat-button" src="assets/images/floating-chat-button.png" alt="" />
+          </div>
+          <div class="pulse"></div>
+      </button>
+
+      <div class="dropdown-menu dropdown-menu-right pb-chat-dropdown">
+          <div class="wc-app" id="login-overlay">
+              <div class="wc-chatview-panel chat-box"">
+                  <div class="chatbox-header-text"><span>Chat with <b>Sterva</b></span></div>
+                  <div class="wc-message-pane">
+                      <div class="wc-message-groups" role="log" tabindex="0">
+                          <div class="wc-message-group-content" style="margin-top: 26px;">
+                              <form id="login-form">
+                                  <div class="form-group">
+                                      <input class="form-control text-field" type="text" placeholder="Name" name="CustomerName" maxlength="50" required>
+                                  </div>
+                                  <div class="form-group">
+                                      <input class="form-control text-field" type="text" placeholder="Mobile Number (ex. 08033308021)" name="MobileNumber" maxlength="50" required pattern="^(?:\+?234\d{10}|\d{11})$">
+                                  </div>
+                                  <div class="form-group">
+                                      <span class="loader hidden"></span>
+                                      <input type="submit" class="btn btn-danger btn-start-chat" value="Start Chat" id="i3rootStartChatBtn">
+                                      <div class=""></div>
+                                  </div>
+                              </form>
+                          </div>
+                      </div>
+                      <div class="wc-suggested-actions"><!-- react-empty: 9 --></div>
+                  </div>
+              </div>
+          </div>
+
+          <div id="bot"></div>
+      </div>
+  </div>
+  <div id="hero-section">
+    <div class="hero-bg-img"></div>
+    <div id="nav">
+      <div class="left-side">
+        <img src="/img/sterling-logo.png">
+        <div>Sterling Bank</div>
+      </div>
+      <div class="right-side">
+        <a href="#contact-section">Contact Us</a>
+        <a href="#faq-section">FAQ's</a>
+        <a href="#hero-bottom">Features</a>
+      </div>
+    </div>
+    <br>  
+    <div id="hero-main">
+      <div id="hero-main-left">
+        <div class="header-text">Meet Sterlar</div>
+        <div class="long-text">Chat with Sterva to open an account, transfer funds, pay bills, buy airtime or data and access our in-branch services right now!</div>
+        <div class="button-section">
+          <button class="button-chat">Chat with Sterlar</button>
+          <button class="button-download">Download app</button>
+        </div>
+      </div>
+      <div id="hero-main-right">
+        <img src="/img/sterlar.png">
+      </div>
+      <div class="row"></div>
+    </div>
+    <div id="hero-bottom">
+      <div id="hero-bottom-left">
+        <div class="header-text">What Sterlar can help you do?</div>
+        <div class="long-text">Some ways sterva helps you to access, interact, and transact with your Sterling Bank accounts.</div>
+      </div>
+      <div id="hero-bottom-right">
+        <div class="sterva-function border-right-solid border-bottom-solid border-bottom-solid-mobile">
+          <!-- <img src="/img/img-support.png"> -->
+          <div class="circle bg-customer-support"></div>
+          <div class="bold-text">24/7 Customer Support</div>
+          <div class="gray-text">Manual and automated escalation to an agent</div>
+        </div>
+        <div class="sterva-function border-bottom-solid">
+          <!-- <img src="/img/img-support.png"> -->
+          <div class="circle bg-funds-transfer"></div>
+          <div class="bold-text">Funds Transfer</div>
+          <div class="gray-text">Send funds to others. No tokens, all I need is the account number </div>
+        </div>
+        <div class="sterva-function border-right-solid border-bottom-solid-mobile">
+          <!-- <img src="/img/img-support.png"> -->
+          <div class="circle bg-bills"></div>
+          <div class="bold-text">Bill Payment</div>
+          <div class="gray-text">Payment of your bills and any other thing to make your life easier.</div>
+        </div>
+        <div class="sterva-function">
+          <!-- <img src="/img/img-support.png"> -->
+          <div class="circle"></div>
+          <div class="bold-text">Enquiries</div>
+          <div class="gray-text">Get real time updates on your account, view your account mini-statement.</div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <section id="faq-section">
+      <div class="col-sm-8 col-sm-offset-2">
+        <div class="row header-text col-sm-12">Frequently Asked Questions</div>
+        <div class="long-text">This is a list popular questions customers have asked us about Sterva. If you still can't find what you are looking for, kindly contact us:</div>
+        <div class="row col-sm-12">
+          <div class="faq-left-section">
+            <div class="question-box">
+              <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                <div class="col-sm-11 col-xs-10 question">How do I register for the service?</div>
+                <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+                <!-- <div class="col-xs-1"><i class="fa fa-minus-circle"></i></div> -->
+              </div>
+              <div class="col-xs-12 answer">
+                Step 1: Simply download the app from the respective stores<br><br>
+                Step 2: Register your profile with your mobile number<br><br>
+                Step 3: Add your NUBAN (for Sterling Bank customers) or Debit Card (for non-Sterling Bank account holders)<br><br>
+                Step 4: Add your preferred chat channel(s)                
+              </div>
+            </div>
+          
+            <div class="question-box">
+              <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                <div class="col-sm-11 col-xs-10 question">In the event of a dispute, how do I channel my complaint?</div>
+                <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+              </div>
+              <div class="col-xs-12 answer">
+                You can have a live chat with one of our Customer Care Agents by selecting the ChatPay menu which is “Chat with us” on your preferred chat channel.
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                <div class="col-sm-11 col-xs-10 question">What are the services Sterva offer? </div>
+                <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+              </div>
+              <div class="col-xs-12 answer">
+                  You can check your balance, transfer funds, purchase airtime, pay bills. You can also have a live Chat with an Agent, locate the closest Sterling ATMs around you, purchase movie ticket, change / reset your PIN.
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                <div class="col-sm-11 col-xs-10 question">Do I need to always use the app?</div>
+                <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+              </div>
+              <div class="col-xs-12 answer">
+                  No. Once the initial registration is completed using the app, you can always initiate transactions through any of the social media chat platforms you have registered on.
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                <div class="col-sm-11 col-xs-10 question">What are the available chat platforms?</div>
+                <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+              </div>
+              <div class="col-xs-12 answer">
+                  Currently, Sterva can assist you on Twitter, Facebook Messenger, Whatsapp, WeChat…
+              </div>
+            </div>
+            <div class="question-box">
+                <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                  <div class="col-sm-11 col-xs-10 question">What are Sterva’s  transaction limits?</div>
+                  <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+                </div>
+                <div class="col-xs-12 answer">
+                    For bank accounts –  N100,000 per day.
+                </div>
+            </div>
+            <div class="question-box">
+                <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                  <div class="col-sm-11 col-xs-10 question">What are the type of accounts that can be linked to Sterva? </div>
+                  <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+                </div>
+                <div class="col-xs-12 answer">
+                    You can link personal Savings and Current accounts.
+                </div>
+            </div>
+          </div>
+          <div class="faq-right-section">
+            <div class="question-box">
+              <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                <div class="col-sm-11 col-xs-10 question">What are the charges for transactions?</div>
+                <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+              </div>
+              <div class="col-xs-12 answer">
+                Bill Payment : ₦100<br><br>
+                Funds Transfer (other banks) : ₦105<br><br>
+                Sterling to Sterling Transfers : 	₦0<br><br>
+                Airtime Top-Up : ₦0
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                <div class="col-sm-11 col-xs-10 question">Can I have access to Sterva if I do not have an account with Sterling Bank? </div>
+                <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+              </div>
+              <div class="col-xs-12 answer">
+                Yes, non–Sterling Bank account holders can enjoy Sterva’s services by linking their debit card issued by other Nigerian Banks.
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                <div class="col-sm-11 col-xs-10 question">How safe are transactions handled by Sterva?</div>
+                <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+              </div>
+              <div class="col-xs-12 answer">
+                Upon initial registration, an OTP is generated to validate customer information. This is inputted to complete registration process.<br><br>
+                For financial transactions, you are required to input a 4-digit PIN which must have been created upon registration before transaction can be processed.<br><br>
+                For the individual chat channels, your login credentials act as extra security<br><br>
+                For debit card holders, CVV2 and card PIN are required upon registration. These parameters are used by the issuing bank to validate the customer.<br><br>
+                Please note that Sterva does not store card information.
+              </div>
+            </div>
+            <div class="question-box">
+              <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                <div class="col-sm-11 col-xs-10 question">Can I register for more than one social chat platform?</div>
+                <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+              </div>
+              <div class="col-xs-12 answer">
+                  Yes, you can register as many chat platforms as available on the app.
+              </div>
+            </div>
+            <div class="question-box">
+                <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                  <div class="col-sm-11 col-xs-10 question">Where can I download Sterva?</div>
+                  <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+                </div>
+                <div class="col-xs-12 answer">
+                    Android – Play Store. Others are being worked on and will be deployed soon. This will be duly communicated.
+                </div>
+            </div>
+            <div class="question-box">
+                <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                  <div class="col-sm-11 col-xs-10 question">Can I link multiple cards and accounts to Sterva?</div>
+                  <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+                </div>
+                <div class="col-xs-12 answer">
+                    You can only link a debit card or a bank account to a profile at the moment.
+                </div>
+            </div>
+            <div class="question-box">
+                <div class="faq-clickable-section" onclick="toggleAnswer(this)">
+                  <div class="col-sm-11 col-xs-10 question">How do I get assistance on registration and carrying out transactions?</div>
+                  <div class="col-sm-1 col-xs-1"><i class="fa fa-plus-circle"></i></div>
+                </div>
+                <div class="col-xs-12 answer">
+                    Visit the website <a href="https://www.sterlingbankng.com/sterva" target="_blank">www.sterlingbankng.com/sterva</a> to view how to do videos on registration and transactions
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+  <section id="contact-section">
+      <div class="header-text">Contact us</div>
+      <div class="form-and-contact-details">
+        <div class="left-part">
+          <div class="contact-info"><i class="fa fa-map-marker-alt"></i><span>Sterling Towers, 20 Marina, Lagos Island, Lagos.</span></div> 
+          <div class="contact-info"><i class="fa fa-phone"></i><span>0700STERLING (070078375464), 01-4484481-5</span></div> 
+          <div class="contact-info"><i class="fa fa-envelope"></i><span>customercare@sterlingbankng.com</span></div> 
+        </div>
+        <div class="right-part">
+          <form>
+              <input type="text" class="text-field" placeholder="Your full name">
+              <input type="text" class="text-field" placeholder="Your email address">
+              <textarea placeholder="Your questions/ enquiries"></textarea>
+              <button>submit</button>
+          </form>
+        </div>
+      </div>
+  </section>
+  <div id="section-copyright">2018 © Sterling Bank Plc. All Rights Reserved. </div>
+
+  <script src="js/main.js"></script>
+
+  <script src="assets/js/jquery-1.10.2.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+  <script src="//cdn.botframework.com/botframework-webchat/latest/botchat.js"></script>
+  <script src="assets/js/clayfy.js"></script>
+  <script src="assets/js/custom.js"></script>
+
+</body>
+</html>
